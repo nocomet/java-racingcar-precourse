@@ -19,10 +19,9 @@ public class Car {
         return position.get();
     }
 
-    public String toStringStatusForm() {
+    public String toStatusString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(name.get());
-        sb.append(" : ");
+        sb.append(name.get()).append(" : ");
         for (int i = 0; i < position.get(); i++) {
             sb.append("-");
         }

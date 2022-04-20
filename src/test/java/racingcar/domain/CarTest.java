@@ -22,7 +22,7 @@ class CarTest {
     void carTest02() {
         String name = "myCar";
         Car car = new Car(name);
-        assertThat(car.toStringStatusForm())
+        assertThat(car.toStatusString())
                 .isEqualTo(name + " : ");
     }
 
