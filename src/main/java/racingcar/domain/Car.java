@@ -3,27 +3,27 @@ package racingcar.domain;
 import camp.nextstep.edu.missionutils.Randoms;
 
 public class Car {
-    private final String name;
-    private int position;
+    private final Name name;
+    private PositionVo position;
 
     public Car(String name) {
-        this.name = name;
-        this.position = 0;
+        this.name = new Name(name);
+        this.position = PositionVo.zero();
     }
 
     public String getName() {
-        return name;
+        return name.get();
     }
 
     public int getPosition() {
-        return position;
+        return position.get();
     }
 
     public String toStringStatusForm() {
         StringBuilder sb = new StringBuilder();
-        sb.append(name);
+        sb.append(name.get());
         sb.append(" : ");
-        for (int i = 0; i < position; i++) {
+        for (int i = 0; i < position.get(); i++) {
             sb.append("-");
         }
         return sb.toString();
@@ -34,7 +34,7 @@ public class Car {
             return false;
         }
 
-        position += 1;
+        position = position.moveOnePosition();
         return true;
     }
 }
