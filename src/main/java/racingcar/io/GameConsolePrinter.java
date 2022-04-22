@@ -33,6 +33,6 @@ public class GameConsolePrinter implements GamePrinter {
     @Override
     public void printWinner(WinnerCars winnerCars) {
         System.out.print(WINNER);
-        System.out.println(winnerCars.toWinnerString());
+        System.out.print(winnerCars.toWinnerString());
     }
 }
