@@ -18,4 +18,21 @@ public class WinnerCars {
     public Car getWinnerCar(int idx) {
         return carList.get(idx);
     }
+
+    public String toWinnerString() {
+        StringBuilder sb = new StringBuilder();
+        for (Car car : carList) {
+            sb.append(car.getName())
+                    .append(", ");
+        }
+        removeLastComma(sb);
+        return sb.toString();
+    }
+
+    private void removeLastComma(StringBuilder sb) {
+        if (carList.size() > 0) {
+            sb.deleteCharAt(sb.length() - 1)
+                    .deleteCharAt(sb.length() - 1);
+        }
+    }
 }

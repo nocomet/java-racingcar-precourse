@@ -1,14 +1,13 @@
-package racingcar;
+package racingcar.domain.cars;
 
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import racingcar.domain.car.Car;
-import racingcar.domain.cars.Cars;
-import racingcar.domain.cars.WinnerCars;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -72,7 +71,7 @@ class CarsTest {
         WinnerCars winnerCars = cars.calcWinner();
         assertThat(winnerCars).isNotNull();
         assertThat(winnerCars.numberOfWinner()).isEqualTo(1);
-        assertThat(winnerCars.getWinnerCar(0)).isEqualTo(winner);
+        Assertions.assertThat(winnerCars.getWinnerCar(0)).isEqualTo(winner);
     }
 
     @DisplayName("Cars 클래스 공동 우승자를 체크할 수 있다.")
