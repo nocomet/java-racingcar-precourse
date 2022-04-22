@@ -1,11 +1,12 @@
-package racingcar.domain;
+package racingcar.domain.cars;
 
 import org.assertj.core.util.Lists;
+import racingcar.domain.car.Car;
 
 import java.util.*;
 
 public class Cars {
-    private List<Car> carList;
+    private final List<Car> carList;
 
     public Cars() {
         this.carList = new ArrayList<>();

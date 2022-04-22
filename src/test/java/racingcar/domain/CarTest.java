@@ -3,6 +3,7 @@ package racingcar.domain;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
+import racingcar.domain.car.Car;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

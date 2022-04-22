@@ -1,9 +1,11 @@
-package racingcar.domain;
+package racingcar.domain.cars;
+
+import racingcar.domain.car.Car;
 
 import java.util.List;
 
 public class WinnerCars {
-    private List<Car> carList;
+    private final List<Car> carList;
 
     public WinnerCars(List<Car> carList) {
         this.carList = carList;

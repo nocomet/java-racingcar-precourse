@@ -6,9 +6,9 @@ import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import racingcar.domain.Car;
-import racingcar.domain.Cars;
-import racingcar.domain.WinnerCars;
+import racingcar.domain.car.Car;
+import racingcar.domain.cars.Cars;
+import racingcar.domain.cars.WinnerCars;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
