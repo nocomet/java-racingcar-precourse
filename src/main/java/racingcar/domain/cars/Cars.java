@@ -34,12 +34,16 @@ public class Cars {
         int winnerPosition = -1;
         for (Car car : carList) {
             int position = car.getPosition();
-            List<Car> candidate = map.getOrDefault(position, Lists.newArrayList());
-            map.putIfAbsent(position, candidate);
-            candidate.add(car);
+            addPositionCarMap(map, car, position);
             winnerPosition = Math.max(winnerPosition, position);
         }
         return new WinnerCars(map.get(winnerPosition));
+    }
+
+    private void addPositionCarMap(Map<Integer, List<Car>> map, Car car, int position) {
+        List<Car> candidate = map.getOrDefault(position, Lists.newArrayList());
+        map.putIfAbsent(position, candidate);
+        candidate.add(car);
     }
 
     public String toStatusString() {
